@@ -17,7 +17,7 @@ int main(){
 }
 
 char getUserChoice(){
-    char choice;
+    char pChoice;
     do{
         std::cout << "Rock-Paper-Scissors Game!\n"; 
         std::cout << "*************************\n";
@@ -25,8 +25,10 @@ char getUserChoice(){
         std::cout << "'R' for Rock\n";
         std::cout << "'P' for Paper\n";
         std::cout << "'S' for Scissors\n";
-        std::cin >> choice;
-    }while();
+        std::cin >> pChoice;
+    }while(pChoice != 'r' && pChoice != 'p' && pChoice != 's');
+
+    return pChoice;
 }
 
 char getComputerChoice(){
@@ -36,11 +38,14 @@ char getComputerChoice(){
 void showChoice(char choice){
     switch(choice){
         case 'r': std::cout << "Rock\n";
+            break;
         case 'p': std::cout << "Paper\n";
+            break;
         case 's': std::cout << "Scissors\n";
+            break;
     }
 }
 
 void chooseWinner(char player, char computer){
-
+    
 }
